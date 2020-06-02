@@ -37,9 +37,16 @@ namespace Color_Picker
         public void ChangeColor() {
            // Color с = Color.FromArgb(trackBar_Red.Value, trackBar_Green.Value, trackBar_Blue.Value);
             pictureBox1.BackColor = Color.FromArgb(trackBar_Red.Value, trackBar_Green.Value, trackBar_Blue.Value);
-          
+            string red = trackBar_Red.Value.ToString("X");
+            string green = trackBar_Green.Value.ToString("X");
+            string blue = trackBar_Blue.Value.ToString("X");
 
-            string Text = "#"+trackBar_Red.Value.ToString("X") + trackBar_Green.Value.ToString("X") + trackBar_Blue.Value.ToString("X");
+            //чтобы вернуть потерянный первый ноль в 16ричной системе
+            if (red.Length == 1) red = "0" + red;
+            if (green.Length == 1) green = "0" + green;
+            if (blue.Length == 1) blue = "0" + blue;
+
+            string Text = "#" + red + green + blue;
             Clipboard.Clear();
             Clipboard.SetText(Text);
 
@@ -52,6 +59,11 @@ namespace Color_Picker
         }
 
         private void label_Red_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

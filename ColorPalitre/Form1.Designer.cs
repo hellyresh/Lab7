@@ -38,10 +38,10 @@
             this.label_RedMinValue = new System.Windows.Forms.Label();
             this.label_RedMaxValue = new System.Windows.Forms.Label();
             this.label_GreenMinValue = new System.Windows.Forms.Label();
-            this.label_BlueMinValue = new System.Windows.Forms.Label();
             this.label_GreenMaxValue = new System.Windows.Forms.Label();
             this.label_BlueMaxValue = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_BlueMinValue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Red)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Green)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Blue)).BeginInit();
@@ -54,7 +54,7 @@
             this.trackBar_Red.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.SetColumnSpan(this.trackBar_Red, 2);
             this.trackBar_Red.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackBar_Red.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackBar_Red.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.trackBar_Red.Location = new System.Drawing.Point(333, 5);
             this.trackBar_Red.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trackBar_Red.Maximum = 255;
@@ -71,7 +71,7 @@
             this.trackBar_Green.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.SetColumnSpan(this.trackBar_Green, 2);
             this.trackBar_Green.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackBar_Green.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackBar_Green.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.trackBar_Green.Location = new System.Drawing.Point(333, 137);
             this.trackBar_Green.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trackBar_Green.Maximum = 255;
@@ -88,7 +88,7 @@
             this.trackBar_Blue.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.SetColumnSpan(this.trackBar_Blue, 2);
             this.trackBar_Blue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackBar_Blue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackBar_Blue.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.trackBar_Blue.Location = new System.Drawing.Point(333, 269);
             this.trackBar_Blue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trackBar_Blue.Maximum = 255;
@@ -205,17 +205,6 @@
             this.label_GreenMinValue.TabIndex = 14;
             this.label_GreenMinValue.Text = "0";
             // 
-            // label_BlueMinValue
-            // 
-            this.label_BlueMinValue.AutoSize = true;
-            this.label_BlueMinValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_BlueMinValue.Location = new System.Drawing.Point(333, 330);
-            this.label_BlueMinValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_BlueMinValue.Name = "label_BlueMinValue";
-            this.label_BlueMinValue.Size = new System.Drawing.Size(18, 72);
-            this.label_BlueMinValue.TabIndex = 15;
-            this.label_BlueMinValue.Text = "0";
-            // 
             // label_GreenMaxValue
             // 
             this.label_GreenMaxValue.AutoSize = true;
@@ -251,6 +240,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
+            // label_BlueMinValue
+            // 
+            this.label_BlueMinValue.AutoSize = true;
+            this.label_BlueMinValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_BlueMinValue.Location = new System.Drawing.Point(333, 330);
+            this.label_BlueMinValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_BlueMinValue.Name = "label_BlueMinValue";
+            this.label_BlueMinValue.Size = new System.Drawing.Size(18, 72);
+            this.label_BlueMinValue.TabIndex = 15;
+            this.label_BlueMinValue.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -262,6 +262,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Color Picker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Red)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Green)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Blue)).EndInit();
